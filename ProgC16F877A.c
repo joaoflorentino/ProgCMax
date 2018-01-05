@@ -60,3 +60,37 @@ void main()            // Inicio do programa principal
 
 }  // end void main
 
+// Esta função acha o bit pattern(matrix de bits) para ser enviado
+// para o PORTC e mostrar um numero no Display de 7 segmentos. O numero
+// é passado como um arqumento para função.
+
+int Display(int no)
+{
+  int Pattern;
+  int SEGMENTO[] = {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x67};
+  Pattern=SEGMENTO[no];  // para retornoar o Pattern
+  return (Pattern);
+  }    //end função
+  
+  void changeCount()
+    {
+  
+       while(MAIS == 1)
+       {
+        Cnt = Cnt +1;
+        delay_ms(250);
+        if(Cnt >80) Cnt=80;
+        if (Cnt > 0) DIGITNG=1;
+       }
+       
+       while(MENOS == 1)
+       {
+        Cnt = Cnt - 1;
+        delay_ms(250);
+        if (Cnt <1 ) Cnt =0;
+        if (Cnt <1) DIGITNG =0;
+        
+       }
+       
+  }
+  
