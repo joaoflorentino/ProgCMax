@@ -6,17 +6,38 @@ Value=0
 [BUILD_TYPE]
 Value=0
 [FILES]
-Count=1
-[HEADERS]
 Count=0
 [BINARIES]
 Count=0
+[IMAGES]
+Count=0
+ActiveImageIndex=-1
+[OPENED_FILES]
+Count=0
+[EEPROM]
+Count=0
+[ACTIVE_COMMENTS_FILES]
+Count=0
 [OTHER_FILES]
 Count=0
-[OPENED_FILES]
-Count=1
-File0=C:\Git\local\ProgCmax01\ProgC16F877A.c
 [SEARCH_PATH]
-Count=0
+Count=3
+Path0=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\defs\
+Path1=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\
+Path2=C:\Git\local\ProgCMaxV1\
 [HEADER_PATH]
+Count=0
+[HEADERS]
+Count=0
+[PLDS]
+Count=0
+[Useses]
+Count=0
+[ACTIVE_TAB]
+Value=ProgC16F877A.c
+[USE_EEPROM]
+Value=0
+[EEPROM_DEFINITION]
+Value=
+[EXPANDED NODES]
 Count=0
