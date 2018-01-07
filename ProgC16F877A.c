@@ -32,7 +32,7 @@ void main()            // Inicio do programa principal
   changeCount();
   
   Mil = (Cnt/1000)-((Cnt%1000)/1000); //Digito dos milhares
-  PORTC=Diplay(Mil);       // Envia para PORTC
+  PORTC=Display(Mil);       // Envia para PORTC
   DIGIT1=1;
   delay_ms(5);
   DIGIT1=0;
@@ -45,7 +45,7 @@ void main()            // Inicio do programa principal
   DIGIT2=0;
   
   Msd = (Cnt%100);
-  Msd = (Msd%/10)- ((Msd%10)/10);
+  Msd = (Msd%10)- ((Msd%10)/10);
   PORTC=Display(Msd);
   DIGIT3=1;
   delay_ms(5);
@@ -70,7 +70,7 @@ int Display(int no)
   int SEGMENTO[] = {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x67};
   Pattern=SEGMENTO[no];  // para retornoar o Pattern
   return (Pattern);
-  }    //end função
+}    //end função
   
   void changeCount()
     {
@@ -93,4 +93,3 @@ int Display(int no)
        }
        
   }
-  

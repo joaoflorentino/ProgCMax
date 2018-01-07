@@ -1,0 +1,28 @@
+1) durante a compilação para gerar o .hex ocorreu um erro de não se achar arquivo na pasta
+para arrumar este erro segui o blogo que instrui da seguinte forma:
+
+abrir o painel de gestão de projeto 
+em View / Project Manager 
+
+Na lista de pastas, entrar em source e verificar se existe o arquivo
+que dá nome ao projeto caso não haja ( e esse é o erro ) clicar com o botão
+direito e clicar na opção incluir um arquivo no projeto (add a file to project)
+e colocar o arquivo que esta trabalhando 
+
+Ao compilar vai dar resultado e vão aparecer os erros de digitação, operações erradas ou 
+nenhum erro caso tudo esteja correto e vai compilar o programa gerando o .hex
+
+abaixo as mesmas instruções em ingles do blog:
+
+*******************************************************************************************
+Click on Project Manager on the right side of your screen. 
+
+Click on the plus sign (+) to the left of your program name. There should be a plus sign (+) to the left of the Sources folder. 
+
+Click on the plus sign (+) to the left of the Sources folder. This should be the name of your program. 
+
+If there is no plus sign (+) to the left of the Sources folder, you will get the error you have described. 
+To fix this, RIGHT click on the Sources folder, then click on Add File to Project... 
+Locate your program file, click on it, then click the Open button. This will fix the problem. :wink:
+
+*******************************************************************************************

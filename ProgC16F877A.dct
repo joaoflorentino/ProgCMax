@@ -101,6 +101,8 @@ ccpr1l
 ccpr2
 ccpr2h
 ccpr2l
+cen
+changecount
 chs0
 chs0_bit
 chs1
@@ -124,6 +126,7 @@ cmie
 cmie_bit
 cmif
 cmif_bit
+cnt
 comfrem
 compare_double
 cren
@@ -166,6 +169,7 @@ delay_5ms
 delay_80us
 delay_8ms
 delay_cyc
+display
 div_16x16_s
 div_16x16_s_l
 div_16x16_u
@@ -234,6 +238,10 @@ irp
 irp_bit
 longint2double
 longword2double
+lsd
+main
+mil
+msd
 mul_16x16_s
 mul_16x16_u
 mul_32x32_fp
