@@ -79,8 +79,8 @@ int Display(int no)
        {
         Cnt = Cnt +1;
         delay_ms(250);
-        if(Cnt >80) Cnt=80;
-        if (Cnt > 0) DIGITNG=1;
+        if(Cnt >8000) Cnt=8000;
+        if (Cnt > 0) DIGITNG=0;
        }
        
        while(MENOS == 1)
@@ -88,7 +88,7 @@ int Display(int no)
         Cnt = Cnt - 1;
         delay_ms(250);
         if (Cnt <1 ) Cnt =0;
-        if (Cnt <1) DIGITNG =0;
+        if (Cnt <1) DIGITNG =1;
         
        }
        

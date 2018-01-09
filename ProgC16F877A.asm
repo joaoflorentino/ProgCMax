@@ -77,16 +77,15 @@ L_main0:
 ;ProgC16F877A.c,36 :: 		DIGIT1=1;
 	BSF        PORTD+0, 0
 ;ProgC16F877A.c,37 :: 		delay_ms(5);
-	MOVLW      13
+	MOVLW      26
 	MOVWF      R12+0
-	MOVLW      251
+	MOVLW      248
 	MOVWF      R13+0
 L_main2:
 	DECFSZ     R13+0, 1
 	GOTO       L_main2
 	DECFSZ     R12+0, 1
 	GOTO       L_main2
-	NOP
 	NOP
 ;ProgC16F877A.c,38 :: 		DIGIT1=0;
 	BCF        PORTD+0, 0
@@ -159,16 +158,15 @@ L_main2:
 ;ProgC16F877A.c,43 :: 		DIGIT2=1;
 	BSF        PORTD+0, 1
 ;ProgC16F877A.c,44 :: 		delay_ms(5);
-	MOVLW      13
+	MOVLW      26
 	MOVWF      R12+0
-	MOVLW      251
+	MOVLW      248
 	MOVWF      R13+0
 L_main3:
 	DECFSZ     R13+0, 1
 	GOTO       L_main3
 	DECFSZ     R12+0, 1
 	GOTO       L_main3
-	NOP
 	NOP
 ;ProgC16F877A.c,45 :: 		DIGIT2=0;
 	BCF        PORTD+0, 1
@@ -245,16 +243,15 @@ L_main3:
 ;ProgC16F877A.c,50 :: 		DIGIT3=1;
 	BSF        PORTD+0, 2
 ;ProgC16F877A.c,51 :: 		delay_ms(5);
-	MOVLW      13
+	MOVLW      26
 	MOVWF      R12+0
-	MOVLW      251
+	MOVLW      248
 	MOVWF      R13+0
 L_main4:
 	DECFSZ     R13+0, 1
 	GOTO       L_main4
 	DECFSZ     R12+0, 1
 	GOTO       L_main4
-	NOP
 	NOP
 ;ProgC16F877A.c,52 :: 		DIGIT3=0;
 	BCF        PORTD+0, 2
@@ -287,16 +284,15 @@ L_main4:
 ;ProgC16F877A.c,56 :: 		DIGIT4=1;
 	BSF        PORTD+0, 3
 ;ProgC16F877A.c,57 :: 		delay_ms(5);
-	MOVLW      13
+	MOVLW      26
 	MOVWF      R12+0
-	MOVLW      251
+	MOVLW      248
 	MOVWF      R13+0
 L_main5:
 	DECFSZ     R13+0, 1
 	GOTO       L_main5
 	DECFSZ     R12+0, 1
 	GOTO       L_main5
-	NOP
 	NOP
 ;ProgC16F877A.c,58 :: 		DIGIT4=0;
 	BCF        PORTD+0, 3
@@ -383,11 +379,11 @@ L_changeCount6:
 	BTFSC      STATUS+0, 2
 	INCF       _Cnt+1, 1
 ;ProgC16F877A.c,81 :: 		delay_ms(250);
-	MOVLW      3
+	MOVLW      6
 	MOVWF      R11+0
-	MOVLW      138
+	MOVLW      19
 	MOVWF      R12+0
-	MOVLW      85
+	MOVLW      173
 	MOVWF      R13+0
 L_changeCount8:
 	DECFSZ     R13+0, 1
@@ -398,8 +394,9 @@ L_changeCount8:
 	GOTO       L_changeCount8
 	NOP
 	NOP
-;ProgC16F877A.c,82 :: 		if(Cnt >80) Cnt=80;
+;ProgC16F877A.c,82 :: 		if(Cnt >8000) Cnt=8000;
 	MOVLW      128
+	XORLW      31
 	MOVWF      R0+0
 	MOVLW      128
 	XORWF      _Cnt+1, 0
@@ -407,16 +404,16 @@ L_changeCount8:
 	BTFSS      STATUS+0, 2
 	GOTO       L__changeCount16
 	MOVF       _Cnt+0, 0
-	SUBLW      80
+	SUBLW      64
 L__changeCount16:
 	BTFSC      STATUS+0, 0
 	GOTO       L_changeCount9
-	MOVLW      80
+	MOVLW      64
 	MOVWF      _Cnt+0
-	MOVLW      0
+	MOVLW      31
 	MOVWF      _Cnt+1
 L_changeCount9:
-;ProgC16F877A.c,83 :: 		if (Cnt > 0) DIGITNG=1;
+;ProgC16F877A.c,83 :: 		if (Cnt > 0) DIGITNG=0;
 	MOVLW      128
 	MOVWF      R0+0
 	MOVLW      128
@@ -429,7 +426,7 @@ L_changeCount9:
 L__changeCount17:
 	BTFSC      STATUS+0, 0
 	GOTO       L_changeCount10
-	BSF        PORTC+0, 7
+	BCF        PORTC+0, 7
 L_changeCount10:
 ;ProgC16F877A.c,84 :: 		}
 	GOTO       L_changeCount6
@@ -444,11 +441,11 @@ L_changeCount11:
 	BTFSS      STATUS+0, 0
 	DECF       _Cnt+1, 1
 ;ProgC16F877A.c,89 :: 		delay_ms(250);
-	MOVLW      3
+	MOVLW      6
 	MOVWF      R11+0
-	MOVLW      138
+	MOVLW      19
 	MOVWF      R12+0
-	MOVLW      85
+	MOVLW      173
 	MOVWF      R13+0
 L_changeCount13:
 	DECFSZ     R13+0, 1
@@ -475,7 +472,7 @@ L__changeCount18:
 	CLRF       _Cnt+0
 	CLRF       _Cnt+1
 L_changeCount14:
-;ProgC16F877A.c,91 :: 		if (Cnt <1) DIGITNG =0;
+;ProgC16F877A.c,91 :: 		if (Cnt <1) DIGITNG =1;
 	MOVLW      128
 	XORWF      _Cnt+1, 0
 	MOVWF      R0+0
@@ -488,7 +485,7 @@ L_changeCount14:
 L__changeCount19:
 	BTFSC      STATUS+0, 0
 	GOTO       L_changeCount15
-	BCF        PORTC+0, 7
+	BSF        PORTC+0, 7
 L_changeCount15:
 ;ProgC16F877A.c,93 :: 		}
 	GOTO       L_changeCount11
