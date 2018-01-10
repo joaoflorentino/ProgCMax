@@ -13,7 +13,7 @@ void main()
   PORTD.F1 =0;
   PORTD.F2 =0;
   PORTD.F3 =0;
-  PORTC.F7 =0;
+  PORTD.F4 =0;
 
  while(1)
  {
@@ -44,6 +44,7 @@ void main()
   PORTD.F3 =1;
  delay_ms(5);
   PORTD.F3 =0;
+
  }
 
 }
@@ -68,15 +69,16 @@ int Display(int no)
  Cnt = Cnt +1;
  delay_ms(250);
  if(Cnt >8000) Cnt=8000;
- if (Cnt > 0)  PORTC.F7 =0;
+ if (Cnt > 0)  PORTD.F4 =0;
  }
+
 
  while( PORTD.F7  == 1)
  {
  Cnt = Cnt - 1;
  delay_ms(250);
- if (Cnt <1) Cnt =0;
- if (Cnt <1)  PORTC.F7  =1;
+
+ if (Cnt < 0)  PORTD.F4  =1;
 
  }
 

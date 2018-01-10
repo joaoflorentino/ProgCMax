@@ -7,7 +7,7 @@
 #define DIGIT2 PORTD.F1
 #define DIGIT3 PORTD.F2
 #define DIGIT4 PORTD.F3
-#define DIGITNG PORTC.F7
+#define DIGITNG PORTD.F4
 #define MAIS PORTD.F6
 #define MENOS PORTD.F7
 
@@ -56,6 +56,7 @@ void main()            // Inicio do programa principal
   DIGIT4=1;
   delay_ms(5);
   DIGIT4=0;
+  
  } // end while
 
 }  // end void main
@@ -82,13 +83,14 @@ int Display(int no)
         if(Cnt >8000) Cnt=8000;
         if (Cnt > 0) DIGITNG=0;
        }
+
        
        while(MENOS == 1)
        {
         Cnt = Cnt - 1;
         delay_ms(250);
-        if (Cnt <1) Cnt =0;
-        if (Cnt <1) DIGITNG =1;
+       // if (Cnt <0) (Cnt =0) ;
+        if (Cnt < 0) DIGITNG =1;
         
        }
        
