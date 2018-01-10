@@ -45,7 +45,7 @@ void main()            // Inicio do programa principal
   DIGIT2=0;
   
   Msd = (Cnt%100);
-  Msd = (Msd%10)- ((Msd%10)/10);
+  Msd = (Msd/10)- ((Msd%10)/10);
   PORTC=Display(Msd);
   DIGIT3=1;
   delay_ms(5);
@@ -87,7 +87,7 @@ int Display(int no)
        {
         Cnt = Cnt - 1;
         delay_ms(250);
-        if (Cnt <1 ) Cnt =0;
+        if (Cnt <1) Cnt =0;
         if (Cnt <1) DIGITNG =1;
         
        }

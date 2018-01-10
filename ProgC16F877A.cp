@@ -33,7 +33,7 @@ void main()
   PORTD.F1 =0;
 
  Msd = (Cnt%100);
- Msd = (Msd%10)- ((Msd%10)/10);
+ Msd = (Msd/10)- ((Msd%10)/10);
  PORTC=Display(Msd);
   PORTD.F2 =1;
  delay_ms(5);
@@ -75,7 +75,7 @@ int Display(int no)
  {
  Cnt = Cnt - 1;
  delay_ms(250);
- if (Cnt <1 ) Cnt =0;
+ if (Cnt <1) Cnt =0;
  if (Cnt <1)  PORTC.F7  =1;
 
  }

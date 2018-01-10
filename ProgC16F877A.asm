@@ -188,16 +188,12 @@ L_main3:
 	MOVWF      _Msd+0
 	MOVF       R0+1, 0
 	MOVWF      _Msd+1
-;ProgC16F877A.c,48 :: 		Msd = (Msd%10)- ((Msd%10)/10);
+;ProgC16F877A.c,48 :: 		Msd = (Msd/10)- ((Msd%10)/10);
 	MOVLW      10
 	MOVWF      R4+0
 	MOVLW      0
 	MOVWF      R4+1
 	CALL       _Div_16x16_S+0
-	MOVF       R8+0, 0
-	MOVWF      R0+0
-	MOVF       R8+1, 0
-	MOVWF      R0+1
 	MOVF       R0+0, 0
 	MOVWF      FLOC__main+0
 	MOVF       R0+1, 0
@@ -456,7 +452,7 @@ L_changeCount13:
 	GOTO       L_changeCount13
 	NOP
 	NOP
-;ProgC16F877A.c,90 :: 		if (Cnt <1 ) Cnt =0;
+;ProgC16F877A.c,90 :: 		if (Cnt <1) Cnt =0;
 	MOVLW      128
 	XORWF      _Cnt+1, 0
 	MOVWF      R0+0
